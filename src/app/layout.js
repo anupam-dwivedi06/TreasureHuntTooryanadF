@@ -1,5 +1,6 @@
 import "./globals.css";
 import Link from "next/link";
+import { Toaster } from "react-hot-toast"
 
 export const metadata = { title: "Treasure Hunt" };
 
@@ -7,6 +8,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Toaster className="top-right" reverseOrder={false} />
         <nav className="sticky top-0 z-10 bg-white/80 backdrop-blur border-b">
           <div className="max-w-5xl mx-auto flex items-center justify-between p-4">
             <Link href="/" className="font-bold">Treasure Hunt</Link>
