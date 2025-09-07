@@ -24,9 +24,9 @@ export default function Home() {
         body: JSON.stringify(form),
       });
       const data = await res.json();
-      showMessage(data.msg || "Registered");
+      toast.success("Registered");
     } catch (error) {
-      showMessage("Registration failed. Please try again.");
+      toast.error("Registration failed. Please try again.");
     }
   }
 
@@ -46,9 +46,9 @@ export default function Home() {
         toast.success("Loged in successfully");
         setTimeout(() =>{
           router.push("/hunt");
-        }, 3000);
+        }, 2000);
       } else {
-        showMessage(data.msg || "Login failed");
+        toast.error("Wrong credentials"); 
       }
     } catch (error) {
       showMessage("An error occurred during login.");
@@ -72,7 +72,7 @@ export default function Home() {
     try {
       await fetch("/api/auth/logout", { method: "POST" });
       setMe(null);
-      showMessage("Logged out");
+      toast.success("Loged Out");
     } catch (error) {
       showMessage("An error occurred during logout.");
     }

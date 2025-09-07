@@ -9,12 +9,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Toaster className="top-right" reverseOrder={false} />
-        <nav className="sticky top-0 z-10 bg-white/80 backdrop-blur border-b">
+        <nav className="sticky top-0 z-10 bg-yellow-200 backdrop-blur border-b">
           <div className="max-w-5xl mx-auto flex items-center justify-between p-4">
-            <Link href="/" className="font-bold">Treasure Hunt</Link>
-            <div className="space-x-3">
-              <Link className="px-3 py-1 rounded hover:bg-gray-100" href="/hunt">Hunt</Link>
-              <Link className="px-3 py-1 rounded hover:bg-gray-100" href="/admin">Admin</Link>
+            <Link href="/" className="font-bold text-[#A64B08] text-2xl ">Treasure Hunt</Link>
+            <div className="space-x-3 text[#A64B08]">
+              <Link className="px-3 py-1 rounded hover:bg-gray-100 text[#A64B08] font-semibold" href="/hunt">Hunt</Link>
+              <Link className="px-3 py-1 rounded hover:bg-gray-100 text[#A64B08] font-semibold" href="/admin">Admin</Link>
             </div>
           </div>
         </nav>
